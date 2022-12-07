@@ -1,0 +1,22 @@
+<div class="container" >
+            <fieldset *ngIf="book!==undefined">
+            <legend>Details</legend>
+            <div >
+                <h3>{{book.title}}</h3>
+                <hr class="solid">
+                <h5>by {{book.author}}</h5>
+                
+            <div class="line">
+                <div class="between">
+                   <img src={{book.image}}>
+                   <div class="bottom-left"></div>
+                   <button class="priceButton">{{book.price.toFixed(2)}} $</button>
+                </div>
+                <div>{{book.description}}</div>
+            </div>
+
+           </div>
+          
+           </fieldset>
+</div>>
+       

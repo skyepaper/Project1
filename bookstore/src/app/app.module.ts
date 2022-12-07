@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './core/welcome/welcome.component';
 import { ProfileComponent } from './core/profile/profile.component';
 import { AddBookComponent } from './core/add-book/add-book.component';
+import { DetailComponent } from './core/detail/detail.component';
 
 
 
@@ -28,7 +29,8 @@ import { AddBookComponent } from './core/add-book/add-book.component';
     LogoutComponent,
     WelcomeComponent,
     ProfileComponent,
-    AddBookComponent
+    AddBookComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

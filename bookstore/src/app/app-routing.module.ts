@@ -4,6 +4,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { LogoutComponent } from './auth/logout/logout.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AddBookComponent } from './core/add-book/add-book.component';
+import { DetailComponent } from './core/detail/detail.component';
 import { MainComponent } from './core/main/main.component';
 import { ProfileComponent } from './core/profile/profile.component';
 import { WelcomeComponent } from './core/welcome/welcome.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'welcome',component:WelcomeComponent},
   {path:'profile',component:ProfileComponent},
   {path:'addBook',component:AddBookComponent},
+  {path:'detail/:bookId',component:DetailComponent},
   {path:'',component:WelcomeComponent},
 ];
 

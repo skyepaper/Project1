@@ -1,0 +1,52 @@
+.container{
+    width:100%;
+    height:auto;
+    background-image: url("../../../../background.png");
+      background-position: center;
+      background-repeat:repeat;
+      background-size:auto;
+      background-attachment: fixed;
+    display:flex;
+    flex-direction:row;
+    flex-flow: wrap;
+  }
+fieldset{
+    width: 550px;
+    margin:2rem auto;
+    border:2px solid;
+    padding: 2rem;
+    background: rgba(94, 94, 65,0.8);
+    
+
+}
+label{
+    display: block;
+    font-family: "Gill Sans", sans-serif;
+    padding: .5rem 0;
+}
+input{
+    display: block;
+    width:100%;
+    opacity: 1;
+}
+button{
+    display: block;
+    width:100%;
+    border:0;
+    background: darkblue;
+    padding: .5rem;
+    color:white;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    opacity: 1;
+}
+button:hover{
+    background: lightblue;
+}
+.line{
+    display:flex;
+  flex-direction:row;
+}
+.between{
+    margin: 10px;
+}

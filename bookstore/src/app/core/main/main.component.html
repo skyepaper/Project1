@@ -11,7 +11,7 @@
             </div>
                 
                 <button class="priceButton">{{book.price.toFixed(2)}} $</button>
-                <button class="detailButton">Details</button>
+                <button class="detailButton" [routerLink]="['/detail', book.id]">Details</button>
             </div>
         </div>
 
