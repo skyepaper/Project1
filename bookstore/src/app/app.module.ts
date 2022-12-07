@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,11 +11,13 @@ import { MainComponent } from './core/main/main.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LogoutComponent } from './auth/logout/logout.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { WelcomeComponent } from './core/welcome/welcome.component';
 import { ProfileComponent } from './core/profile/profile.component';
 import { AddBookComponent } from './core/add-book/add-book.component';
 import { DetailComponent } from './core/detail/detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NetworkInterceptor } from './service/network.interceptor';
 
 
 
@@ -36,9 +39,15 @@ import { DetailComponent } from './core/detail/detail.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:NetworkInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

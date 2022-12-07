@@ -7,11 +7,8 @@ img {
     height: 200px;
     object-fit:none;
   }
-  #dash{
-    display: block;
-      justify-content: space-between;    
-      width: 200vw;
-  }
+
+ 
   ul {
     list-style-type: none;
     margin: 0;
@@ -39,11 +36,13 @@ img {
   .active {
     background-color: #04AA6D;
   }
-  #title {
+  #title-main {
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    height: 100px;
     overflow: hidden;
+    line-height:100px;
     text-align: center;
     font-family: 'Courier New', monospace;
     font-size:6vw;

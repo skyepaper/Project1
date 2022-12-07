@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit} from '@angular/core';
 import { IBook } from 'src/app/interface/book';
+import { LoadingService } from 'src/app/service/loading.service';
 
 @Component({
   selector: 'app-main',
@@ -9,7 +10,9 @@ import { IBook } from 'src/app/interface/book';
 })
 export class MainComponent implements OnInit {
 
-  constructor(private http:HttpClient) { }
+  loading$=this.loader.loading$;
+
+  constructor(private http:HttpClient,public loader:LoadingService) { }
   books:IBook[]|null=null;
   
   ngOnInit(): void {

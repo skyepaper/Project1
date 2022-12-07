@@ -1,5 +1,7 @@
+<mat-progress-spinner [mode]="'indeterminate'" *ngIf="loading$ | async"></mat-progress-spinner>
 
-        <div class="container" >
+       
+<div class="container" >
             <div class="box" *ngFor="let book of this.books">
                 <h3>{{book.title}}</h3>
                 <hr class="solid">
