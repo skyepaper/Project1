@@ -1,0 +1,224 @@
+{
+  "users": [
+    {
+      "username": "kokoko",
+      "password": "kokoko",
+      "id": 1
+    },
+    {
+      "username": "pizza",
+      "password": "pasta",
+      "id": 2
+    }
+  ],
+  "books": [
+    {
+      "title": "Alice`s adventures in wonderland",
+      "author": "Lewis Carroll",
+      "description": "This edition brings together the complete and unabridged text with more than 70 stunning illustrations by Robert Ingpen, each reflecting his unique style and extraordinary imagination in visualising this enchanting story.",
+      "price": 12.5,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+9826578756_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 1
+    },
+    {
+      "title": " The adventures of Huckleberry Finn",
+      "author": "Mark Twain",
+      "description": "Presents the adventures of a boy and a runaway slave as they travel down the Mississippi River on a raft. Universally acclaimed as one of the greatest creations of American fiction, Adventures of Huckleberry Finn is one of those few books that are read over and over again, with ever increasing enjoyment",
+      "price": 8.5,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+98240992_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 2
+    },
+    {
+      "title": " Pride and prejudice",
+      "author": "Jane Austen",
+      "description": "A novel of manners about the romantic pas de deux between Elizabeth Bennet and Fitzwilliam Darcy, two perfectly suited lovers who, at first, find each other insufferable. Despite Elizabeth's negative feelings about Darcy, fate seems determined to keep throwing this pair together, and Darcy, almost in spite of himself, will make revelations that will end up causing Elizabeth to question everything she believes. Set in a time when marrying well was a woman's only way to assure a secure and comfortable future, Pride and Prejudice is arguably the forerunner of all romantic comedies and certainly one of the best-loved novels of all time.",
+      "price": 10,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+1819544586_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 3
+    },
+    {
+      "title": "Moby-Dick",
+      "author": "Herman Melville",
+      "description": "Moby-Dick has a monumental reputation. Less well known are the novel's unexpectedly weird, funny, tantalizing, messy, and wondrous moments. Narrator Ishmael, along with the whaleship Pequod's other \"meanest mariners, and renegades and castaways\", is beguiled into joining Captain Ahab in his vengeful pursuit of the white whale that \"dismasted\" him. But along the way, Ishmael takes the reader along many a detour into variegated ways of knowing. In a tone \"strangely compounded of fun and fury\", Moby-Dick brings outlandish curiosity to bear on the multitudinous, oceanic scale of our diverse world",
+      "price": 16.8,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+8072382176_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 4
+    },
+    {
+      "title": "A Christmas carol",
+      "author": "Charles Dickens ",
+      "description": "An abridgement of Dickens's beloved tale of a miser who learns the true meaning of Christmas when three ghostly visitors review his past and foretell his future",
+      "price": 6.5,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+841476527_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 5
+    },
+    {
+      "title": "Little women",
+      "author": "Louisa May Alcott",
+      "description": "\"Meg, Jo, Beth, and Amy don't have a lot of money, but they are rich in love. Will that be enough to see the sisters through?\"",
+      "price": 7.5,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+2307787356_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 6
+    },
+    {
+      "title": "To kill a mockingbird",
+      "author": "Harper Lee",
+      "description": "A young girl growing up in an Alabama town in the 1930s learns of injustice and violence when her father, a widowed lawyer, defends a black man falsely accused of rape",
+      "price": 10.2,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+051777784_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 7
+    },
+    {
+      "title": " The Wizard of Oz",
+      "author": "L. Frank Baum",
+      "description": "\"After a cyclone transports her to the land of Oz, Dorothy must seek out the great wizard in order to return to Kansas.\"",
+      "price": 14,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+4375373_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 8
+    },
+    {
+      "title": " The great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "description": "Years after first meeting Daisy, when he was merely a penniless soldier, Gatsby has remade himself into an eccentric millionaire, throwing lavish parties at his New York mansion every weekend with the hope of enticing the woman of his dreams into his reach. It is through these parties that Nick, Daisy's cousin, first meets Gatsby and learns of his deep, unrelenting love. When at last Gatsby and the now-married Daisy reunite, the consequences of their illicit affair will reverberate through the lives of everyone around them",
+      "price": 18.9,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+2485006586_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 9
+    },
+    {
+      "title": " The grapes of wrath",
+      "author": "John Steinbeck",
+      "description": "Depicts the hardships and suffering endured by the Joads as they journey from Oklahoma to California during the Depression",
+      "price": 14.6,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+27384071_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 10
+    },
+    {
+      "title": " 20,000 leagues under the sea",
+      "author": "Jules Verne",
+      "description": "Professor Arronax and his two companions, trapped aboard a fantastic submarine as prisoners of the deranged Captain Nemo, come face to face with exotic ocean creatures and strange sights hidden from the world above",
+      "price": 15.3,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+02261992_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 11
+    },
+    {
+      "title": " Heidi",
+      "author": "Johanna Spyri",
+      "description": "Story of heidi",
+      "price": 8.6,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+543586922_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 12
+    },
+    {
+      "title": " The last of the Mohicans",
+      "author": "James Fenimore Cooper",
+      "description": "Chingachgook and Uncas are the last living members of the great Mohican tribe. Hawkeye, a colonial scout, is their companion and loyal friend. In the midst of the French and Indian War, the three take great risks to lead the two daughters of a British colonel to safety through the battle-torn northern wilderness. When the girls are captured by the vicious Huron tribe, Chingachgook, Uncas, and Hawkeye risk their very lives to rescue them",
+      "price": 12.3,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+07352786_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 13
+    },
+    {
+      "title": " Anne of Green Gables",
+      "author": "L. M. Montgomery",
+      "description": "Story of anne",
+      "price": 6.5,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+5853439156_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 14
+    },
+    {
+      "title": " Lady chatterleys lover",
+      "author": "D. H. Lawrence ",
+      "description": "Story of lover",
+      "price": 5.6,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+6266578756_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 15
+    },
+    {
+      "title": " The catcher in the rye",
+      "author": "J. D. Salinger",
+      "description": "Story of Holden Caufield with his idiosyncrasies, penetrating insight, confusion, sensitivity and negativism. Holden, knowing he is to be expelled from school, decides to leave early. He spends three days in New York City and tells the story of what he did and suffered there",
+      "price": 9.9,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+91569287_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 16
+    },
+    {
+      "title": "Pinocchio",
+      "author": "Carlo Collodi",
+      "description": "Presents the adventures of Pinocchio, a mischievous wooden puppet, who wants more than anything else to become a real boy",
+      "price": 10.2,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+428544412_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 17
+    },
+    {
+      "title": " Lord of the flies",
+      "author": "William Golding",
+      "description": "Classic study of human nature which depicts the degeneration of a group of schoolboys marooned on a desert island",
+      "price": 12.6,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+041918_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 18
+    },
+    {
+      "title": "Farewell to arms",
+      "author": "Ernest Hemingway",
+      "description": "Farewell to arms",
+      "price": 6.7,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+8537233556_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 19
+    },
+    {
+      "title": " The trial",
+      "author": "Franz Kafka",
+      "description": "This new edition of Kafka's The Trial includes a comprehensive selection of extra material, including notes on the text, pictures and a section on Kafka's life and works.",
+      "price": 14.5,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+2074434856_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 20
+    },
+    {
+      "title": " My Ántonia",
+      "author": "Willa Cather",
+      "description": "In this symphonically powerful and magnificently observed novel, Cather created one of the most winning heroines in American fiction, a woman whose calm, undemonstrative strength and robust high spirits make her emblematic of the virtues Cather most admired in her country",
+      "price": 12.6,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+468259444_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 21
+    },
+    {
+      "title": " Of mice and men",
+      "author": "John Steinbeck",
+      "description": "\"They are an unlikely pair: George is \"small and quick and dark of face\"; Lennie, a man of tremendous size, has the mind of a young child. Yet they have formed a \"family,\" clinging together in the face of loneliness and alienation. Laborers in California's dusty vegetable fields, they hustle work when they can, living a hand-to-mouth existence. For George and Lennie have a plan: to own an acre of land and a shack they can call their own. When they land jobs on a ranch in the Salinas Valley, the fulfillment of their dream seems to be within their grasp. But even George cannot guard Lennie from the provocations of a flirtatious woman, nor predict the consequences of Lennie's unswerving obedience to the things George taught him\"",
+      "price": 18.2,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+55123647_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 22
+    },
+    {
+      "title": " A Connecticut Yankee in King Arthur's court",
+      "author": "Mark Twain",
+      "description": "HarperCollins is proud to present its new range of best-loved, essential classics.",
+      "price": 10.5,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+772883602_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 23
+    },
+    {
+      "title": " Nineteen eighty-four",
+      "author": "George Orwell ",
+      "description": "BIG BROTHER IS WATCHING YOU",
+      "price": 6.3,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+1325520376_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 24
+    },
+    {
+      "title": " For whom the bell tolls",
+      "author": "Ernest Hemingway ",
+      "description": "GENERAL & LITERARY FICTION. High in the pine forests of the Spanish Sierra, a guerrilla band prepares to blow up a vital bridge. Robert Jordan, a young American volunteer, has been sent to handle the dynamiting. There, in the mountains, he finds the dangers and the intense comradeship of war. And there he discovers Maria, a young woman who has escaped from Franco's rebels",
+      "price": 16.8,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+446942323_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 25
+    },
+    {
+      "title": " The Swiss family Robinson",
+      "author": "Johann David Wyss ",
+      "description": "The Swiss family Robinson\n",
+      "price": 5.4,
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+8066600856_140.jpg?allowDefault=false&client=WorldcatOrgUI",
+      "id": 26
+    }
+  ]
+}

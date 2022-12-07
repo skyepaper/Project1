@@ -22,7 +22,7 @@
   "test": "ng test",
   
     
-  "server": "json-server --watch ./server/database.json"
+  "server": "json-server --watch ../server/database.json"
   
   },
   
