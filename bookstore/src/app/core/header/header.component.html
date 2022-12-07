@@ -1,0 +1,30 @@
+<header id="site-header">
+    
+    <div id="title">Bookstore</div>
+    <img src="https://c1.wallpaperflare.com/preview/127/366/443/library-book-bookshelf-read.jpg">
+
+    <ul>
+        <li><a class="active" routerLink="home">Home</a></li>
+        <li><a href="#news">News</a></li>
+
+        <div *ngIf="!readLocalStorageValue('token')">
+        <li style="float:right"><a class="active" routerLink="register">Register</a></li>
+        <li style="float:right"><a class="active" routerLink="login">Login</a></li>
+        </div>
+
+        <div *ngIf="readLocalStorageValue('token')">
+            <li style="float:right"><a class="active" routerLink="logout">Logout</a></li>
+            <li style="float:right"><a class="active" routerLink="profile">Profile</a></li>
+            <li style="float:right"><a class="active" routerLink="addBook">Add Book</a></li>
+            <li style="float:right"><a>{{getUsername()}}</a></li>
+        </div>
+    </ul>
+         
+         <!-- <div id="user">
+              <span id="user-welcome">Welcome</span>
+              <a data-route="my-books" class="button link" href="#">My Books</a>
+              <a data-route="add-book" class="button link" href="#">Add Book</a>
+              <a data-route="logout" class="button link" href="#">Logout</a>
+          </div>-->
+   
+</header>

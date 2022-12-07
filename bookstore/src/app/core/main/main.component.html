@@ -1,0 +1,17 @@
+
+        <div class="container" >
+            <div class="box" *ngFor="let book of this.books">
+                <h3>{{book.title}}</h3>
+                <hr class="solid">
+                <h5>by {{book.author}}</h5>
+                
+            <div class="img">
+                <img src={{book.image}}>
+                <div class="bottom-left"></div>
+            </div>
+                
+                <button class="priceButton">{{book.price.toFixed(2)}} $</button>
+                <button class="detailButton">Details</button>
+            </div>
+        </div>
+

@@ -1,0 +1,17 @@
+fieldset{
+    max-width: 500px;
+    margin:2rem auto;
+    border:2px solid;
+    padding: 2rem;
+}
+h1,h2,h3{
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+}
+h5{
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    margin:0.5rem auto;
+    border:0.5px solid;
+    padding: 0.5rem;
+}

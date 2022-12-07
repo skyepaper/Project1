@@ -1,0 +1,75 @@
+
+.container{
+  width:100%;
+  height:auto;
+  background-image: url("../../../../background.png");
+    background-position: center;
+    background-repeat:repeat;
+    background-size:auto;
+    background-attachment: fixed;
+  display:flex;
+  flex-direction:row;
+  flex-flow: wrap;
+}
+.box{
+  width: 13%;
+  min-width: 150px;
+  height:400px;
+  background: rgba(94, 94, 65,0.8);
+  margin:10px;
+}
+
+.img {
+  position: relative;
+  color: white;
+}
+img{
+  height: 200px;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+h3{
+  margin:10px;
+  font-family: 'Times New Roman', monospace;
+}
+h5{
+  margin:5px;
+}
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+.priceButton{
+  display: block;
+  width:100%;
+  height:50px;
+  border:0;
+  font-size: 20px;
+  background:rgb(78, 26, 26);
+  padding: .5rem;
+  color:white;
+  margin-top: 5px;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.priceButton:hover{
+  background: rgb(134, 71, 34);
+}
+.detailButton{
+  display: block;
+  width:100%;
+  height:30px;
+  border:0;
+  font-size: 10px;
+  background: rgb(126, 98, 20);
+  padding: .5rem;
+  color:white;
+  margin-top: 5px;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.detailButton:hover{
+  background: rgb(168, 167, 112);
+}

@@ -1,0 +1,16 @@
+<fieldset>
+    <h1 *ngIf="getUsername()==null">Welcome, guest</h1>
+    <h1 *ngIf="getUsername()!==null">Welcome, {{getUsername()}}</h1>
+    
+    <h3>Bookstore is an unique platform.</h3> 
+    <h3>The catalog contains more than 20 books.</h3> 
+    <u><h2>Services:</h2></u>
+   
+    <h5>--Authentication to 'Json-Server'</h5>
+    <h5>--Add new Book -- user:admin pass:admin</h5>
+    <h5>--Catalog of books</h5>
+    <h5>--Details of books</h5>
+    <h5>--Search bar</h5>
+    <h5>--List of users</h5>
+    <h5>--User profile + Cart list</h5>
+</fieldset>

@@ -1,0 +1,39 @@
+
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+            <legend>Add new Book</legend>
+            <p class="field">
+                <label for="title">Title</label>
+                <span class="input">
+                    <input type="text" formControlName="title">
+                </span>
+            </p>
+            <p class="field">
+                <label for="author">Author</label>
+                <span class="input">
+                    <input type="text" formControlName="author">
+                </span>
+            </p>
+            <p class="field">
+                <label for="description">Description</label>
+                <span class="input">
+                    <textarea formControlName="description"></textarea>
+                </span>
+            </p>
+            <p class="field">
+                <label for="image">Price</label>
+                <span class="input">
+                    <input type="number" formControlName="price">
+                </span>
+            </p>
+            <p class="field">
+                <label for="image">Image</label>
+                <span class="input">
+                    <input type="text" formControlName="image">
+                </span>
+            </p>
+            
+            <button type="submit">submit</button>
+        </fieldset>
+    </form>
+
