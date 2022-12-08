@@ -25,6 +25,7 @@
 }
 img{
   height: 200px;
+  max-width: 150px;
 }
 .bottom-left {
   position: absolute;
@@ -79,4 +80,16 @@ mat-progress-spinner{
   left:50%;
   transform: translate(-50%,-50%);
   z-index:5;
+}
+.search{
+  text-align: center;
+  margin:10px;
+}
+.noResult{
+  text-align: center;
+  border:100px;
+  padding:100px;
+  font-size: 40px;
+  background-image: url("../../../../background.png");
+  background-size:auto;
 }

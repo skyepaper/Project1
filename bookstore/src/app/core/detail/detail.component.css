@@ -33,7 +33,7 @@ button{
     display: block;
     width:100%;
     border:0;
-    background: darkblue;
+    background: rgb(4, 4, 58);
     padding: .5rem;
     color:white;
     margin: 1rem 0;
@@ -50,3 +50,19 @@ button:hover{
 .between{
     margin: 10px;
 }
+h1{
+    margin:10px;
+    font-family: 'Times New Roman', monospace;
+  }
+  #description{
+    margin:10px;
+    font-family: 'Times New Roman', monospace;
+    font-size: larger;
+  }
+  mat-progress-spinner{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index:5;
+  }

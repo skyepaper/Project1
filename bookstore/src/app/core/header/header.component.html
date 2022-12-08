@@ -5,8 +5,7 @@
 
     <ul>
         <li><a class="active" routerLink="home">Home</a></li>
-        <li><a href="#news">News</a></li>
-
+        
         <div *ngIf="!readLocalStorageValue('token')">
         <li style="float:right"><a class="active" routerLink="register">Register</a></li>
         <li style="float:right"><a class="active" routerLink="login">Login</a></li>
@@ -15,7 +14,7 @@
         <div *ngIf="readLocalStorageValue('token')">
             <li style="float:right"><a class="active" routerLink="logout">Logout</a></li>
             <li style="float:right"><a class="active" routerLink="profile">Profile</a></li>
-            <li style="float:right"><a class="active" routerLink="addBook">Add Book</a></li>
+            <li style="float:right"><a *ngIf="getUsername()=='admin'" class="active" routerLink="addBook">Add Book</a></li>
             <li style="float:right"><a>{{getUsername()}}</a></li>
         </div>
     </ul>

@@ -11,13 +11,17 @@ import { MainComponent } from './core/main/main.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LogoutComponent } from './auth/logout/logout.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 import { WelcomeComponent } from './core/welcome/welcome.component';
 import { ProfileComponent } from './core/profile/profile.component';
 import { AddBookComponent } from './core/add-book/add-book.component';
 import { DetailComponent } from './core/detail/detail.component';
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NetworkInterceptor } from './service/network.interceptor';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -41,7 +45,9 @@ import { NetworkInterceptor } from './service/network.interceptor';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    Ng2SearchPipeModule,
+    FormsModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

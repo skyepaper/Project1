@@ -1,4 +1,5 @@
 {
+ 
   "users": [
     {
       "username": "kokoko",
@@ -9,6 +10,11 @@
       "username": "pizza",
       "password": "pasta",
       "id": 2
+    },
+    {
+      "username": "admin",
+      "password": "admin",
+      "id": 3
     }
   ],
   "books": [

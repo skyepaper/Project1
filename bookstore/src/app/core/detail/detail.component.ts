@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IBook } from 'src/app/interface/book';
+import { LoadingService } from 'src/app/service/loading.service';
 
 @Component({
   selector: 'app-detail',
@@ -9,9 +10,12 @@ import { IBook } from 'src/app/interface/book';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
+  loading$=this.loader.loading$;
 
   book:IBook|undefined;
-  constructor(private http:HttpClient,private route: ActivatedRoute) { }
+  constructor(private http:HttpClient,
+              private route: ActivatedRoute,
+              public loader:LoadingService) { }
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;

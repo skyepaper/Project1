@@ -1,5 +1,6 @@
 img {
     display: flex;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
@@ -34,7 +35,10 @@ img {
   }
   
   .active {
-    background-color: #04AA6D;
+    background-color: #0e4d35;
+  }
+  .active:hover {
+    background-color: #22815d;
   }
   #title-main {
     list-style-type: none;
