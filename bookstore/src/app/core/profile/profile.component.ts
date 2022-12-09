@@ -12,10 +12,10 @@ import { LoadingService } from 'src/app/service/loading.service';
 })
 export class ProfileComponent implements OnInit {
   loading$=this.loader.loading$;
-  user:IUser|undefined;
   editFlag:boolean=false;
-  userId:number|null=null;
 
+  user:IUser|undefined;
+  
   constructor(private http:HttpClient,public loader:LoadingService) { }
 
   editForm = new FormGroup({
@@ -24,19 +24,11 @@ export class ProfileComponent implements OnInit {
   });
 
   ngOnInit(): void {
-
-    this.userId=Number(localStorage.getItem('userId'));
-    this.getUser(this.userId);
+    this.getUser();
   }
 
-  getUser(id:number){
-    const headers= new HttpHeaders().set('content-type', 'application/json');
-    this.http.get<IUser>(`http://localhost:3000/users/${id}`).subscribe({
-      next:(value)=>{
-        this.user=value;
-        headers:headers;
-      }});
-      return this.user;
+  getUser(){
+   this.user=JSON.parse(localStorage.getItem('user')!);
   }
   edit(){
     this.editFlag=true;
@@ -50,11 +42,12 @@ export class ProfileComponent implements OnInit {
     username: this.user?.username!,
     password: this.user?.password!,
     email:email,
-    image:image
+    image:image,
+    cart:this.user?.cart!
    }
 
     const headers= new HttpHeaders().set('content-type', 'application/json');
-    this.http.put<IUser>(`http://localhost:3000/users/${this.userId}`,editUser).subscribe({
+    this.http.put<IUser>(`http://localhost:3000/users/${this.user?.id}`,editUser).subscribe({
       next:(value)=>{
         this.user=value;
         headers:headers;

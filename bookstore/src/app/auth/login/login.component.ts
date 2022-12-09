@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { IBook } from 'src/app/interface/book';
 import { IUser } from 'src/app/interface/user';
 
 @Component({
@@ -61,9 +62,8 @@ async onSubmit() {
 
   let token=Math.floor(Math.random()*10000).toString();
   localStorage.setItem('token',token);
-  localStorage.setItem('user',user.username);
-  localStorage.setItem('userId',findUser.id.toString());
-  console.log(user);
+ 
+  this.http.get<IUser>(`http://localhost:3000/users/${findUser.id}`, { 'headers': headers }).subscribe((res)=>{localStorage.setItem('user',JSON.stringify(res));});
 
   this.router.navigate(['/welcome']);
   return;

@@ -2,8 +2,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit} from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { debounceTime, distinctUntilChanged, Observable, switchMap } from 'rxjs';
 import { IBook } from 'src/app/interface/book';
+import { IUser } from 'src/app/interface/user';
 import { LoadingService } from 'src/app/service/loading.service';
 import Swal from 'sweetalert2';
 
@@ -15,19 +15,22 @@ import Swal from 'sweetalert2';
 export class MainComponent implements OnInit {
 
   loading$=this.loader.loading$;
+  user:IUser|null=null;
+
+  public books:IBook[]=[];
+  public searchBooks:IBook[]=[];
+  public booksCart:IBook[]=[];
+  
   searchFlag:boolean=false;
   searchForm=new FormGroup({
     searchWord:new FormControl('')
   })
 
   constructor(private http:HttpClient,public loader:LoadingService,private router:Router) { }
-  
-  public books:IBook[]=[];
-  public searchBooks:IBook[]=[];
-  
+
   ngOnInit(): void {
-   this.getBooks();
-   this.searchBooks=[];
+    this.getBooks();
+    this.getUser();
   }
 
   getBooks(){
@@ -41,7 +44,11 @@ export class MainComponent implements OnInit {
       }});
       return this.books;
   }
-  
+
+  getUser(){
+    this.user=JSON.parse(localStorage.getItem('user')!);
+  }
+
   search(){
     
     let searchWord=this.searchForm.controls['searchWord'].value?.toLowerCase()!;
@@ -52,11 +59,10 @@ export class MainComponent implements OnInit {
           b.title.toLowerCase().includes(searchWord)
         );
         this.searchFlag=true;
-        console.log(this.searchBooks);
         return ;
   }
 
-  confirmPopUp(title:string){
+  confirmPopUp(title:string,price:number){
     if(localStorage.getItem('token')){
       Swal.fire({
         title:`Add '${title}' to cart?`,
@@ -66,8 +72,12 @@ export class MainComponent implements OnInit {
       }).then((res)=>{
         if(res.value){
 
-          console.log('buy book');
-
+          let bookToBuy=<IBook>{
+            title:title,
+            price:price
+          }
+          this.buyBook(bookToBuy);
+          this.router.navigate(['/profile']);
         }
       })
     }
@@ -77,4 +87,26 @@ export class MainComponent implements OnInit {
     
      
   }
+
+  buyBook(book:IBook){
+    this.booksCart=this.user?.cart!;
+    this.booksCart?.push(book)!;
+    
+    let editUser=<IUser>{
+      id:this.user?.id,
+      username:this.user?.username,
+      password:this.user?.password,
+      email:this.user?.email,
+      image:this.user?.image,
+      cart:this.booksCart
+     }
+     const headers= new HttpHeaders().set('content-type', 'application/json');
+    this.http.put<IUser>(`http://localhost:3000/users/${this.user?.id}`,editUser).subscribe({
+      next:(value)=>{
+        this.user=value;
+        headers:headers;
+      }});
+      localStorage.setItem('user',JSON.stringify(editUser));
+  }
+
     }

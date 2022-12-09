@@ -65,7 +65,15 @@ img{
 }
 .cartList{
   display: block;
-  width: 450px;
+  width: 400px;
+  height:12px;
+  font-family: 'Courier New', Courier, monospace;
+  border:0.1px solid;
+  padding: 7.9px;
+}
+.priceList{
+  display: block;
+  width: 50px;
   height:12px;
   font-family: 'Courier New', Courier, monospace;
   border:0.1px solid;

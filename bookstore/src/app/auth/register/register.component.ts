@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms'
 import { HttpClient ,HttpHeaders} from '@angular/common/http';
 import { IUser } from '../../interface/user';
 import { Router } from '@angular/router';
+import { IBook } from 'src/app/interface/book';
 
 @Component({
   selector: 'app-register',
@@ -20,15 +21,18 @@ public errorMessage:string='';
     confirmPassword: new FormControl(''),
   });
 
- 
   users:IUser[]|null=null;
+  public booksCart:IBook[]=[];
   
  
 async onSubmit() {
 
   let user=<IUser>{
     username:this.registerForm.controls['username'].value,
-    password:this.registerForm.controls['password'].value
+    password:this.registerForm.controls['password'].value,
+    email:'',
+    image:'',
+    cart:this.booksCart
   }
   let confirm=this.registerForm.controls['confirmPassword'].value;
   
@@ -70,11 +74,11 @@ async onSubmit() {
     return;
   }
   
-    this.http.post<IUser>('http://localhost:3000/users',user, { 'headers': headers }).subscribe((res)=>{});
+  
+    this.http.post<IUser>('http://localhost:3000/users',user, { 'headers': headers }).subscribe((res)=>{localStorage.setItem('user',JSON.stringify(res));});
   
     let token=Math.floor(Math.random()*10000).toString();
     localStorage.setItem('token',token);
-    localStorage.setItem('user',user.username);
     
     this.router.navigate(['/welcome']);
     return;
