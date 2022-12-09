@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { debounceTime, distinctUntilChanged, Observable, switchMap } from 'rxjs';
 import { IBook } from 'src/app/interface/book';
 import { LoadingService } from 'src/app/service/loading.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-main',
@@ -55,4 +56,25 @@ export class MainComponent implements OnInit {
         return ;
   }
 
+  confirmPopUp(title:string){
+    if(localStorage.getItem('token')){
+      Swal.fire({
+        title:`Add '${title}' to cart?`,
+        showCancelButton:true,
+        confirmButtonText:"Yes",
+        cancelButtonText:"No"
+      }).then((res)=>{
+        if(res.value){
+
+          console.log('buy book');
+
+        }
+      })
+    }
+    else{
+      Swal.fire('Please login...');
+    }
+    
+     
+  }
     }

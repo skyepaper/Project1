@@ -17,13 +17,9 @@ import { ProfileComponent } from './core/profile/profile.component';
 import { AddBookComponent } from './core/add-book/add-book.component';
 import { DetailComponent } from './core/detail/detail.component';
 
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NetworkInterceptor } from './service/network.interceptor';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { FormsModule } from '@angular/forms';
-
-
 
 @NgModule({
   declarations: [
@@ -46,14 +42,9 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
-    Ng2SearchPipeModule,
-    FormsModule
+  
   ],
-  providers: [{
-    provide:HTTP_INTERCEPTORS,
-    useClass:NetworkInterceptor,
-    multi:true
-  }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,5 +5,6 @@ export interface IUser{
     username: string;
     password: string;
     email:string;
+    image:string;
     cart:IBook[];
     }

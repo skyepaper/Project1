@@ -1,0 +1,114 @@
+.container{
+  width:100%;
+  height:auto;
+  background-image: url("../../../../background.png");
+    background-position: center;
+    background-repeat:repeat;
+    background-size:auto;
+    background-attachment: fixed;
+  display:flex;
+  flex-direction:row;
+  flex-flow: wrap;
+}
+fieldset{
+  width: 550px;
+  margin:2rem auto;
+  border:2px solid;
+  padding: 2rem;
+  background: rgba(94, 94, 65,0.8);
+  
+
+}
+label{
+  display: block;
+  font-family: "Gill Sans", sans-serif;
+  padding: .5rem 0;
+}
+input{
+  display: block;
+  width:100%;
+  opacity: 1;
+}
+.line{
+  display:flex;
+flex-direction:row;
+}
+.columb{
+  display:inline-flexbox;
+  flex-direction:col;
+
+}
+.between{
+  margin: 10px;
+}
+h1{
+  margin:10px;
+  font-family: 'Times New Roman', monospace;
+}
+#description{
+  margin:10px;
+  font-family: 'Times New Roman', monospace;
+  font-size: larger;
+}
+mat-progress-spinner{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  z-index:5;
+}
+
+img{
+  height: 150px;
+  max-width: 150px;
+  border-radius: 100%;
+}
+.cartList{
+  display: block;
+  width: 450px;
+  height:12px;
+  font-family: 'Courier New', Courier, monospace;
+  border:0.1px solid;
+  padding: 7.9px;
+}
+
+h4,h1{
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  margin:0.2rem auto;
+  border:0.5px;
+  padding: 0.2rem;
+}
+.editBtn{
+  display: block;
+  width:25%;
+  height:30px;
+  border:0;
+  font-size: 10px;
+  background:rgb(78, 26, 26);
+  padding: .5rem;
+  color:white;
+  margin-top: 5px;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.editBtn:hover{
+  background: rgb(134, 71, 34);
+}
+#deleteBtn{
+  width:30px;
+  height:30px;
+  text-align: center;
+  font-size: 10px;
+  background:rgb(78, 26, 26);
+  color:white;
+  text-transform: uppercase;
+  border:0.1px solid;
+}
+#deleteBtn:hover{
+  background: rgb(134, 71, 34);
+}
+input{
+  display: block;
+  width:30%;
+}

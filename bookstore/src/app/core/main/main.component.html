@@ -16,7 +16,7 @@
                     <div class="bottom-left"></div>
                 </div>
                 
-                <button class="priceButton">{{book.price.toFixed(2)}} $</button>
+                <button class="priceButton" (click)="confirmPopUp(book.title)">{{book.price.toFixed(2)}} $</button>
                 <button class="detailButton" [routerLink]="['/detail', book.id]">Details</button>
             </div>
         </div>
@@ -33,7 +33,7 @@
                     <div class="bottom-left"></div>
                 </div>
                 
-                <button class="priceButton">{{book.price.toFixed(2)}} $</button>
+                <button class="priceButton" (click)="confirmPopUp(book.title)">{{book.price.toFixed(2)}} $</button>
                 <button class="detailButton" [routerLink]="['/detail', book.id]">Details</button>
             </div>
         </div>

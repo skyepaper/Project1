@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IBook } from 'src/app/interface/book';
 import { LoadingService } from 'src/app/service/loading.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-detail',
@@ -32,5 +33,17 @@ export class DetailComponent implements OnInit {
       }});
       return this.book;
   }
-
+  confirmPopUp(title:string){
+    if(localStorage.getItem('token')){
+      Swal.fire({
+        title:`Add '${title}' to cart?`,
+        showCancelButton:true,
+        confirmButtonText:"Yes",
+        cancelButtonText:"No"
+      })
+    }
+    else{
+      Swal.fire('Please login...');
+    }
+}
 }

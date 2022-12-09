@@ -58,9 +58,12 @@ async onSubmit() {
     return;
   }
   
+
   let token=Math.floor(Math.random()*10000).toString();
   localStorage.setItem('token',token);
   localStorage.setItem('user',user.username);
+  localStorage.setItem('userId',findUser.id.toString());
+  console.log(user);
 
   this.router.navigate(['/welcome']);
   return;
