@@ -92,4 +92,5 @@ mat-progress-spinner{
   font-size: 40px;
   background-image: url("../../../../background.png");
   background-size:auto;
+  font-family: 'Courier New', monospace;
 }

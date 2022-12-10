@@ -15,6 +15,7 @@ export class ProfileComponent implements OnInit {
   editFlag:boolean=false;
 
   user:IUser|undefined;
+  public booksCart:IBook[]=[];
   
   constructor(private http:HttpClient,public loader:LoadingService) { }
 
@@ -25,11 +26,15 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUser();
+    this.getBooks();
   }
 
   getUser(){
    this.user=JSON.parse(localStorage.getItem('user')!);
   }
+  getBooks(){
+    this.booksCart=this.user?.cart!;
+   }
   edit(){
     this.editFlag=true;
   }
@@ -53,6 +58,41 @@ export class ProfileComponent implements OnInit {
         headers:headers;
       }});
       this.editFlag=false;
+      localStorage.setItem('user',JSON.stringify(editUser));
+  }
+  sumToPay(){
+    let sum=0;
+    this.booksCart.every(x=>sum+=x.price);
+    return sum.toFixed(2);
+  }
+  deleteBook(book:IBook){
+    
+    for(let i=0;i<this.booksCart.length;i++){
+      if(this.booksCart[i]==book){
+        this.booksCart.splice(i,1);
+
+        let editUser=<IUser>{
+          id:this.user?.id!,
+          username: this.user?.username!,
+          password: this.user?.password!,
+          email:this.user?.email!,
+          image:this.user?.image!,
+          cart:this.booksCart
+         }
+
+         const headers= new HttpHeaders().set('content-type', 'application/json');
+    this.http.put<IUser>(`http://localhost:3000/users/${this.user?.id}`,editUser).subscribe({
+      next:(value)=>{
+        this.user=value;
+        headers:headers;
+      }});
+
+      localStorage.setItem('user',JSON.stringify(editUser));
+
+        return;
+      }
+    }
+
   }
 
 }

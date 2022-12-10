@@ -5,7 +5,7 @@
             <legend>Profile</legend>
             <div >
                 
-            <div class="line">
+            <div class="row">
                 <div class="between">
                     <img *ngIf="!user.image" src='https://www.shutterstock.com/image-vector/book-icon-sign-design-260nw-553945819.jpg'>
                     <img src="{{user.image}}">
@@ -15,46 +15,37 @@
                 
                 <div class="columb">
                     <hr class="solid">
-                <div class="cartList">The adventures of Huckleberry Finn</div>
-                <div class="cartList">12345678901234567890123456789012345678901234567890</div>
-                <div class="cartList">emailOfMe@gmail.com</div>
+                       <div class="row" *ngFor="let book of this.booksCart">
+                            <div class="cartList">{{book.title}}</div>
+                            <div class="priceList">{{book.price.toFixed(2)}}</div>
+                            <button id="deleteBtn" (click)="deleteBook(book)">del</button>
+                       </div>
+                       
+                       <div class="noBooks" *ngIf="this.booksCart.length==0">No books</div>
                 </div>
-
-                <div class="columb">
-                    <hr class="solid">
-                <div class="priceList">12.50</div>
-                <div class="priceList">12.50</div>
-                <div class="priceList">12.50</div>
-                </div>
-
-                <div class="columb">
-                    <hr class="solid">
-                <button id="deleteBtn" style="float:right">del</button>
-                <button id="deleteBtn" style="float:right">del</button>
-                <button id="deleteBtn" style="float:right">del</button>
-                <!--<div>No books</div>-->
-                </div>
-
 
             </div>
 
-            <form  [formGroup]="editForm" (ngSubmit)="save()">
+        <form  [formGroup]="editForm" (ngSubmit)="save()">
             <h1 *ngIf="editFlag==false">{{user.username}}</h1>
-            <input *ngIf="editFlag==true" type="text" formControlName="image" placeholder="imgage url...">
-
+            <input *ngIf="editFlag==true && !user.image" type="text" formControlName="image" placeholder="add image url...">
+            <input type="text" *ngIf="editFlag==true && user.image" formControlName="image" placeholder='{{user.image}}'>
+            
             <hr class="solid">
             <div>
-                <h4 style="float:right;font-size: 40px;">25.60 $</h4>
+                <h4 style="float:right;font-size: 40px;">{{this.sumToPay()}} $</h4>
                 
            
                 <h4 *ngIf="editFlag==false">{{user.email}}</h4>
                 <h4 *ngIf="!user.email && editFlag==false">add email...</h4>
-                <input *ngIf="editFlag==true" type="text" formControlName="email" placeholder="email...">
-               
+                
+                <input *ngIf="!user.email && editFlag==true" type="text" formControlName="email" placeholder="add email...">
+               <input *ngIf="user.email && editFlag==true" type="text" formControlName="email" placeholder='{{user.email}}'>
+
                 <button *ngIf="editFlag==false" class="editBtn" (click)="edit()">Edit</button>
                 <button *ngIf="editFlag==true" class="editBtn" type="submit">Save</button>
             </div>
-        </form>
+            </form>
             
            
            </div>

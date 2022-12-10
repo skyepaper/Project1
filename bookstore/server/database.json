@@ -1,38 +1,7 @@
 {
   "users": [
-    {
-      "username": "pizza",
-      "password": "pasta",
-      "email": "",
-      "image": "",
-      "cart": [],
-      "id": 1
-    },
-    {
-      "username": "catcat",
-      "password": "mouse",
-      "email": "",
-      "image": "",
-      "cart": [],
-      "id": 2
-    },
-    {
-      "id": 3,
-      "username": "chair",
-      "password": "table",
-      "email": "",
-      "image": "",
-      "cart": [
-        {
-          "title": " Pride and prejudice",
-          "price": 10
-        },
-        {
-          "title": " The adventures of Huckleberry Finn",
-          "price": 8.5
-        }
-      ]
-    }
+   
+    
   ],
   "books": [
     {

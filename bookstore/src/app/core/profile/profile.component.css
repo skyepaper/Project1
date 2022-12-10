@@ -29,7 +29,7 @@ input{
   width:100%;
   opacity: 1;
 }
-.line{
+.row{
   display:flex;
 flex-direction:row;
 }
@@ -119,4 +119,12 @@ h4,h1{
 input{
   display: block;
   width:30%;
+}
+.noBooks{
+  text-align: center;
+  width:400px;
+  border:10px;
+  padding-top:80px;
+  font-size: 40px;
+  font-family: 'Courier New', monospace;
 }
