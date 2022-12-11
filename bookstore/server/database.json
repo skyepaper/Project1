@@ -1,7 +1,18 @@
 {
   "users": [
-   
-    
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "email": "xxxxxxxxxxxxxxxxxxx",
+      "image": "https://seaworld.org/-/media/seaworld-dotorg/images/infobooks/sea-turtles/section-content/scientific-classification/green-sea-turtle.ashx?hash=AB274CA8D1B538984316D55E661BC01E939E06FA&version=1_201903155014&h=463&w=410&la=en",
+      "cart": [
+        {
+          "title": "Moby-Dick",
+          "price": 16.8
+        }
+      ]
+    }
   ],
   "books": [
     {
